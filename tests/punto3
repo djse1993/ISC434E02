@@ -1,0 +1,31 @@
+        t1.add(2);t1.add(50);
+        t2.add(3);t2.add(50);
+        assertEquals(true, tiempo.earlier(t1,t2));
+
+Conjunto de pruebas:
+
+- Hora 1 siendo menor que la hora 2 retorna verdadero
+hora1 = 3:10
+hora2 = 6:30
+
+-ambas horas iguales retorna falso
+hora1 = 3:30
+hora2 = 3:30
+
+-la misma hora pero los minutos de t1 mayores que los de t2 retorna false
+hora1 = 4:40
+hora2 = 4:20
+
+-la misma hora pero los minutos de t1 menores que los de t2 retorna true
+hora1 = 4:20
+hora2 = 4:50
+
+-hora 2 mayor que la hora 1 retorna false
+hora1 = 2:50
+hora2 = 3:50
+
+Este conjunto de pruebas cubre 100% todos los caminos, ya que toma en cuenta las diferentes situaciones en las que
+las horas podrían estar. Esto quiere decir que evalua los casos en que una hora puede ser igual, una menor y
+otra mayor, lo que garantiza que se pueda entrar a todos los if. Por ende, realiza una cobertura completa. 
+
+ 
